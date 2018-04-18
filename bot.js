@@ -65,5 +65,9 @@ client.on('guildMemberAdd', member => {
        console.log(`${member.user.username} has joined`);
 });
 
+if (message.mentions.members.firstKey() === '436253576537440256') {
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude :angry: !')
+}
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
