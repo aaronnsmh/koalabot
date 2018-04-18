@@ -25,7 +25,7 @@ client.on('message', message => {
 
 client.on('message', message => {    
      if (message.mentions.members.firstKey() === '436253576537440256') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. If you need me, please use the command `=info`!')
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
 }
     let sender = message.author;
 
