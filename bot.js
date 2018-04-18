@@ -23,10 +23,10 @@ client.on('message', message => {
 
 
 
-client.on('message', message => {    
-     if (message.mentions.members.firstKey() === '436253576537440256') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
-}
+///client.on('message', message => {    
+    /// if (message.mentions.members.firstKey() === '436253576537440256') {
+   /// message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
+///}
     let sender = message.author;
     
     if (sender.bot) return;
