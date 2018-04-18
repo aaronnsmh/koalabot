@@ -28,7 +28,10 @@ client.on('message', message => {
     message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
 }
     let sender = message.author;
-
+    if (sender.id === '368083841996554241'){
+        message.channel.send("You are banned from using bot commands!")
+        return;
+    }
     if (sender.bot) return;
     if (message.channel.type === 'dm') {
         message.channel.send("**Unfortunately we can only read things our guild (server). Please join our server (code: https://discord.gg/FtYeKMu) to use the bot! **")
