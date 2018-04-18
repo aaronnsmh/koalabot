@@ -1,6 +1,5 @@
-
 {
-  "name": "Koala Bot",
+  "name": "RoGiveaway",
   "description": "Test",
   "version": "0.0.0",
   "main": "bot.js",
