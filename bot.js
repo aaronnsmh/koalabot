@@ -28,9 +28,7 @@ client.on('message', message => {
     message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
 }
     let sender = message.author;
-    if (sender.id === '368083841996554241'){
-        message.channel.send("You are banned from using bot commands!")
-        return;
+   
     }
     if (sender.bot) return;
     if (message.channel.type === 'dm') {
