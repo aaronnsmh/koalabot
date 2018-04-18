@@ -11,7 +11,7 @@ let allowedRole = message.guild.roles.find("name", "bot admin");
     message.channel.send(sayMessage);
         
        } else {
-         message.channel.send("This command is limited to BOX only.")
+         message.channel.send("This command is limited to bot admins only.")
          message.delete()
          .then(m=>m.delete(10000))
        }
