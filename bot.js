@@ -1,0 +1,70 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const prefix = '!';
+const db = require('quick.db');
+var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
+
+client.on('ready', () => {
+    console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
+    client.user.setStatus("online");
+});
+
+client.on('ready', () => {
+    console.log('Koala Bot is ONLINE. No bugs found at this time.');
+    client.user.setAvatar('https://t0.rbxcdn.com/ab0108dde98f01187a1ceed0f4c878a0')
+});
+
+client.on('message', message => {
+    if (message.content === 'ping') {
+    	message.reply('pong');
+  	}
+});
+
+client.on('message', message => {
+    if (message.content === 'message') {
+        var guildList = client.guilds.array();
+        try {
+            guildList.forEach(guild => guild.defaultChannel.send("messageToSend"));
+        } catch (err) {
+            console.log("Could not send message to ");
+        }
+    }
+});
+
+client.on('message', message => {    
+    
+    let sender = message.author;
+
+    if (sender.bot) return;
+    if (message.channel.type === 'dm') {
+        message.channel.send("**Unfortunately we can only read things our guild (server). Please join our server (code: https://discord.gg/MKHXv2E) to use the bot! **")
+        return;
+    }
+
+        let msg = message.content.toLowerCase();
+        let args = message.content.slice(prefix.length).trim().split(" ");
+        let cmd = args.shift().toLowerCase();
+
+        if (!message.content.startsWith(prefix)) return;
+
+        try {
+
+            let commandFile = require(`./commands/${cmd}.js`);
+            commandFile.run(Discord, client, message, args);
+
+        } catch (e) {
+
+            console.log(e);
+
+        } finally {
+
+            console.log(`${message.author.username} ran the command: ${cmd} sucessfully!`);
+
+        }
+    })
+
+
+
+// THIS  MUST  BE  THIS  WAY
+client.login(process.env.BOT_TOKEN);
