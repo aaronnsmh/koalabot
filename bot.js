@@ -24,7 +24,9 @@ client.on('message', message => {
 
 
 client.on('message', message => {    
-    
+     if (message.mentions.members.firstKey() === '436253576537440256') {
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. If you need me, please use the command `=info`!')
+}
     let sender = message.author;
 
     if (sender.bot) return;
@@ -65,9 +67,6 @@ client.on('guildMemberAdd', member => {
        console.log(`${member.user.username} has joined`);
 });
 
-if (message.mentions.members.firstKey() === '436253576537440256') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude :angry: !')
-}
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
