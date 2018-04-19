@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = 'KC';
 const db = require('quick.db');
+const clbot = new Cleverbot;
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
 
@@ -35,8 +36,14 @@ client.on('message', message => {
     
     if (sender.bot) return;
     if (message.channel.type === 'dm') {
-        message.channel.send("**Unfortunately we can only read things our guild (server). Please join our server (code: https://discord.gg/FtYeKMu) to use the bot! **")
-        return;
+         clbot.write(message.content, (response) => {
+      message.channel.startTyping();
+      setTimeout(() => {
+        message.channel.send(response.output).catch(console.error);
+        message.channel.stopTyping();
+      }, Math.random() * (1 - 3) + 1 * 1000);
+    });
+  }
     }
     
     if (message.mentions.members.firstKey() === '422393536420511752') {
