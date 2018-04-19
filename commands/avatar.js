@@ -5,5 +5,5 @@ var embederrordm = new Discord.RichEmbed()
         .setFooter('Koala Bot | Made by Aaron')
         .setColor('#000000');
 message.reply('Here is your avatar:');
-message.channel.send(embederrordm);
+message.channel.sendembed(embederrordm);
 }
