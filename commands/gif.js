@@ -1,3 +1,5 @@
+exports.run = (Discord, client, message, args) => {
+
 const got = require('got');
 
 // Public API key provided by Giphy for anyone to use.
@@ -27,3 +29,5 @@ exports.info = {
     usage: 'gif <query>',
     description: 'Searches Giphy for GIFs'
 };
+
+}
