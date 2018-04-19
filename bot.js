@@ -29,12 +29,18 @@ client.on('message', message => {
     /// if (message.mentions.members.firstKey() === '436253576537440256') {
    /// message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
 ///}
+    
+    
     let sender = message.author;
     
     if (sender.bot) return;
     if (message.channel.type === 'dm') {
         message.channel.send("**Unfortunately we can only read things our guild (server). Please join our server (code: https://discord.gg/FtYeKMu) to use the bot! **")
         return;
+    }
+    
+    if (message.mentions.members.firstKey() === '422393536420511752') {
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
     }
 
         let msg = message.content.toLowerCase();
