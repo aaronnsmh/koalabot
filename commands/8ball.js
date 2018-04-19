@@ -1,3 +1,5 @@
+exports.run = (Discord, client, message, args) => {
+
 const responses = [
     'Unclear, ask again later',
     'Soon',
@@ -40,3 +42,6 @@ exports.info = {
     usage: '8ball <question>',
     description: 'Asks the magic 8-ball a question'
 };
+
+    
+}
