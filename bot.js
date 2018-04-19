@@ -69,6 +69,8 @@ client.on('guildMemberAdd', member => {
         .setFooter("© Koala Bot | Made by Aaron #1742")
         .setColor(randomColor)
         .setTitle(":wave: Welcome")
+        .addField("Rules","Please make sure to read the rules, they are located in #rules")
+        .addField("Verify","To access all channels in the server, please verify your Roblox account in #verify")
         .setDescription("Welcome to the Koala Cafe server!")
      member.sendEmbed(embedinfo);
        console.log(`${member.user.username} has joined`);
