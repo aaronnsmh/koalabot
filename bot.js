@@ -14,7 +14,6 @@ client.on('ready', () => {
 
 client.on('ready', () => {
     console.log('Koala Bot is ONLINE. No bugs found at this time.');
-    client.user.setAvatar('https://t0.rbxcdn.com/ab0108dde98f01187a1ceed0f4c878a0')
 });
 
 client.on('message', message => {
