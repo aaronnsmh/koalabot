@@ -12,7 +12,7 @@ exports.run = (Discord, client, message, args) => {
         .addField(":o: cointoss", "Tosses a coin.")
         .addField(":frame_photo: avatar", "Shows a picture of your bootiful avatar!")
         .addField(":loudspeaker: say [STRING]", "The bot says what you ask it to say, well duh.")
-        .addField(":fire: kick/ban [USER] [REASON]", "The bot says what you ask it to say, well duh.")
+        .addField(":fire: kick/ban [USER] [REASON]", "The bot kicks/bans the user with the reason you put. Tut tut!")
         .addField(":clock1: More CMDS coming soon", "What do you expect me to put here?")
     message.channel.sendEmbed(embedcmds);
     message.delete(10000)
