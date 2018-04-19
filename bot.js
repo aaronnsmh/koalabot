@@ -61,10 +61,9 @@ client.on('message', message => {
         } finally {
 
             console.log(`${message.author.username} ran the command: ${cmd} sucessfully!`);
-            message.channel.id === '436567976427126788'(`${message.author.username} ran the command: ${cmd} sucessfully!`);
 
-        
-    }
+        }
+    })
 
 client.on('guildMemberAdd', member => {
     var embedinfo = new Discord.RichEmbed()
