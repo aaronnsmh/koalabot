@@ -1,3 +1,5 @@
+exports.run = (Discord, client, message, args) => {
+
 if(!message.member.roles.some(r=>["Administrator", "Moderator"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
     
@@ -19,3 +21,5 @@ if(!message.member.roles.some(r=>["Administrator", "Moderator"].includes(r.name)
     await member.kick(reason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't kick because of : ${error}`));
 message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
+
+}
