@@ -1,4 +1,6 @@
- // Most of this command is identical to kick, except that here we'll only let admins do it.
+exports.run = (Discord, client, message, args) => {
+
+// Most of this command is identical to kick, except that here we'll only let admins do it.
     // In the real world mods could ban too, but this is just an example, right? ;)
     if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
       return message.reply("Sorry, you don't have permissions to use this!");
@@ -15,3 +17,5 @@
     await member.ban(reason)
       .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
 message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
+
+}
