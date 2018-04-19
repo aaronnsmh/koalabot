@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '!';
+const prefix = ':koala:';
 const db = require('quick.db');
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
