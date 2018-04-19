@@ -7,7 +7,7 @@ exports.run = (Discord, client, message, args) => {
     if (kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
 
 
-    message.guild.member(kUser).kcik(kReason);
+    message.guild.member(kUser).kick(kReason);
     let kickChannel = '419094345858154496';
     let pkickchannel = message.guild.channels.find(`name`, "logs");
     message.channel.send('User kicked!')
