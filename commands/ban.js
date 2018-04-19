@@ -1,21 +1,25 @@
 exports.run = (Discord, client, message, args) => {
 
-// Most of this command is identical to kick, except that here we'll only let admins do it.
-    // In the real world mods could ban too, but this is just an example, right? ;)
-    if(!message.member.roles.some(r=>["Administrator"].includes(r.name)) )
-      return message.reply("Sorry, you don't have permissions to use this!");
-    
-    let member = message.mentions.members.first();
-    if(!member)
-      return message.reply("Please mention a valid member of this server");
-    if(!member.bannable) 
-      return message.reply("I cannot ban this user! Do they have a higher role? Do I have ban permissions?");
+    let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+    if (!kUser) return message.channel.send("Can't find user!");
+    let kReason = args.join(" ").slice(22);
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No can do pal!");
+    if (kUser.hasPermission("MANAGE_MESSAGES")) return message.channel.send("That person can't be kicked!");
 
-    let reason = args.slice(1).join(' ');
-    if(!reason) reason = "No reason provided";
-    
-    await member.ban(reason)
-      .catch(error => message.reply(`Sorry ${message.author} I couldn't ban because of : ${error}`));
-message.reply(`${member.user.tag} has been banned by ${message.author.tag} because: ${reason}`);
+    let kickEmbed = new Discord.RichEmbed()
+        .setDescription("~Ban~")
+        .setColor("#e56b00")
+        .addField("Banned User", `${kUser} with ID: ${kUser.id}`)
+        .addField("Banned By", `<@${message.author}> with ID: ${message.author.id}`)
+        .addField("Banned In", message.channel)
+        .addField("Time", message.createdAt)
+        .addField("Reason", kReason);
 
+    message.guild.member(kUser).ban(kReason);
+    let kickChannel = '419094345858154496';
+    let pkickchannel = message.guild.channels.find(`name`, "logs");
+    if (!pkickChannel) return message.channel.send("I can not find the log channel, the user has been kicked. For logs, get the sever admin to make a channel called `logs`.");
+
+    kickChannel.send(kickEmbed);
+    pkickchannel.send(kickEmbed)
 }
