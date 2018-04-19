@@ -9,7 +9,7 @@ exports.run = (Discord, client, message, args) => {
         .setTitle(":book: Koala Cafe Commands :koala: ")
         .setDescription("Wondering what I do? Well you sir/ma'am have a very good question! Read on to see why I am here!")
         .addField(":8ball: 8Ball [QUESTION]", "Responds with what will happen.")
-        .addField(":o:cointoss", "Tosses a coin.")
+        .addField(":o: cointoss", "Tosses a coin.")
         .addField(":loudspeaker: say [STRING]", "The bot says what you ask it to say, well duh.")
         .addField(":clock: More CMDS coming soon", "What do you expect me to put here?")
     message.channel.sendEmbed(embedcmds);
