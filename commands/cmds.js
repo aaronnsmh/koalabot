@@ -11,7 +11,7 @@ exports.run = (Discord, client, message, args) => {
         .addField(":8ball: 8Ball [QUESTION]", "Responds with what will happen.")
         .addField(":o: cointoss", "Tosses a coin.")
         .addField(":loudspeaker: say [STRING]", "The bot says what you ask it to say, well duh.")
-        .addField(":clock: More CMDS coming soon", "What do you expect me to put here?")
+        .addField(":clock1: More CMDS coming soon", "What do you expect me to put here?")
     message.channel.sendEmbed(embedcmds);
     message.delete(10000)
 
