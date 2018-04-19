@@ -1,47 +1,11 @@
 exports.run = (Discord, client, message, args) => {
 
-const responses = [
-    'Unclear, ask again later',
-    'Soon',
-    'Yes',
-    'Absolutely!',
-    'Never',
-    'Magic 8-ball is currently unavailable, please leave a message after the tone. \\*beep\\*',
-    'When you are ready',
-    'Hopefully',
-    'Hopefully not',
-    'Oh my, why would you even ask that?',
-    'What kind of a question is that?',
-    'Over my dead body!',
-    'Haha, funny joke'
-];
+function doMagic8BallVoodoo() {
+    var rand = [':8ball: Absolutly.', ':8ball: Absolutly not.', ':8ball: It is true.', ':8ball: Impossible.', ':8ball: Of course.', ':8ball: I do not think so.', ':8ball: It is true.', ':8ball: It is not true.', ':8ball: I am very undoubtful of that.', ':8ball: I am very doubtful of that.', ':8ball: Sources point to no.', ':8ball: Theories prove it.', ':8ball: Reply hazy try again', ':8ball: Ask again later', ':8ball: Better not tell you now', ':8ball: Cannot predict now', ':8ball: Concentrate and ask again'];
 
-function randomItem(array) {
-    return array[Math.floor(Math.random() * array.length)];
+    return rand[Math.floor(Math.random()*rand.length)];
 }
 
-exports.run = (bot, msg, args) => {
-    if (args.length < 1) {
-        throw 'Please specify something to ask of the magic 8-ball!';
-    }
-
-    let response = randomItem(responses);
-
-    const query = args.join(' ');
-
-    if (query.indexOf('ipodtouch0218') > -1 || query.indexOf('233360087979130882') > -1) {
-        response = 'HAH';
-    }
-
-    msg.edit(`${query} :8ball: | **${response}**`);
-};
-
-
-exports.info = {
-    name: '8ball',
-    usage: '8ball <question>',
-    description: 'Asks the magic 8-ball a question'
-};
-
+    message.channel.sendMessage(doMagic8BallVoodoo())
     
 }
