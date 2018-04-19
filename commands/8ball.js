@@ -6,6 +6,6 @@ function doMagic8BallVoodoo() {
     return rand[Math.floor(Math.random()*rand.length)];
 }
 
-    message.channel.SendMessage(doMagic8BallVoodoo())
+    message.channel.sendMessage(doMagic8BallVoodoo())
     
 }
