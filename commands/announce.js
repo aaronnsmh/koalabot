@@ -20,7 +20,7 @@ let allowedRole = message.guild.roles.find("name", "bot admin");
 		   message.channel.send({embed})
 	   }
 else {
-	message.channel.send("You need to have the ADMINISTRATOR permission to announce!")
+	message.channel.send("You need to have the 'bot admin' role to announce!")
 	return;
 }
 }
