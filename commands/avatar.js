@@ -1,21 +1,11 @@
 
 exports.run = (Discord, client, message, args) => {
-  var message = '';
-
-    if (m.content.indexOf(' ') !== -1) {
-        if (m.mentions) {
-            for (var user of m.mentions) {
-                message += user.avatarURL + '\n';
-            }
-            message.slice(0, -2);
-            bot.sendMessage(m.channel, message);
-        } else {
-            message = m.author.avatarURL;
-            bot.sendMessage(m.channel, message);
-        }
+if(message.mentions.users.first()) { //Check if the message has a mention in it.
+          let user = message.mentions.users.first(); //Since message.mentions.users returns a collection; we must use the first() method to get the first in the collection.
+          let output = user.username + user.discriminator /*Username and Discriminator*/ +
+          "\nAvatar URL: " + user.avatarURL; /*The Avatar URL*/
+          message.channel.sendMessage(output); //We send the output in the current channel.
     } else {
-        message = m.author.avatarURL;
-        bot.sendMessage(m.channel, message);
+          message.reply("Invalid user."); //Reply with a mention saying "Invalid user."
     }
-
 }
