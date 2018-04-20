@@ -4,6 +4,6 @@ try {
 				return message.channel.send({files: [{attachment: response.body.file, name: `cat.${response.body.file.split('.')[2]}`}]});
 			});
 		} catch(err) {
-			return msg.channel.send(error.stack);
+			return message.channel.send(error.stack);
 		}
 }
