@@ -4,7 +4,7 @@ if (message.author.id === '281060171730649089') {
   client.user.setAvatar(sayMessage);
   }
 else {
-reply("You're not cool enough to run this command!")
+  message.channel.send('You are not cool enough to run this command!')
   return;
-}
+  }
 }
