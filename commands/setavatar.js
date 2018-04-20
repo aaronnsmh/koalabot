@@ -5,5 +5,6 @@ if (message.author.id === '281060171730649089') {
   }
 else {
 reply("You're not cool enough to run this command!")
+  return;
 }
 }
