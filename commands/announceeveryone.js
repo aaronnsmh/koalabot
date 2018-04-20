@@ -8,7 +8,7 @@ if (message.member.hasPermission("ADMINISTRATOR")) {
 		   //const colour = args.slice(2).join("");
 		   const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-		   .setTitle("Important Announcement:")
+		   .setTitle(":mega: Important Announcement:")
 		   .setDescription(text);
 		   message.channel.send("@everyone")
 		   message.channel.send({embed})
