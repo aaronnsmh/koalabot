@@ -17,4 +17,8 @@ if (message.member.hasPermission("ADMINISTRATOR")) {
 		   message.channel.send("Announcement from: " + author);
 		   message.channel.send({embed})
 	   }
+else {
+	message.channel.send("You need to have the ADMINISTRATOR permission to announce!")
+	return;
+}
 }
