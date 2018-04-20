@@ -4,13 +4,18 @@ if (message.member.hasPermission("ADMINISTRATOR")) {
 		   const color = args[0]
 				
 		   const text = args.slice(1).join(" ");
+		   const author = message.author;
 		   if (text.length < 1) return message.channel.send("Can not announce nothing");
 		   //const colour = args.slice(2).join("");
 		   const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-		   .setTitle(":mega: Important Announcement:")
+		   .setThumbnail("https://t6.rbxcdn.com/fad4c603a443958512e8adb3660ff221")
+		   .setTitle(":mega: Announcement:")
 		   .setDescription(text);
-		   message.channel.send("@everyone")
+		   .setFooter("An announcment from " + author + " made at ")
+		   .setTimestamp()
+		   message.channel.send("@everyone");
+		   message.channel.send("Announcement from: " + author);
 		   message.channel.send({embed})
 	   }
 }
