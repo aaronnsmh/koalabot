@@ -9,10 +9,12 @@ if (message.member.hasPermission("ADMINISTRATOR")) {
 		   //const colour = args.slice(2).join("");
 		   const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-		   .setAuthor(author)
+		   .setThumbnail("https://t6.rbxcdn.com/fad4c603a443958512e8adb3660ff221")
 		   .setTitle(":mega: Announcement:")
 		   .setDescription(text);
-		   message.channel.send("Announcement from" + author);
+		   .setFooter("An announcment from " + author + " made at ")
+		   .setTimestamp()
+		   message.channel.send("Announcement from: " + author);
 		   message.channel.send({embed})
 	   }
 }
