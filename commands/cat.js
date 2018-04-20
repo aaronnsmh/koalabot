@@ -1,7 +1,10 @@
+const superagent = require("superagent");
 exports.run = (Discord, client, message, args) => {
-try {
-			get('https://aws.random.cat/meow').then(res => {
-				return message.channel.send({files: [{attachment: response.body.file, name: `cat.${response.body.file.split('.')[2]}`}]});
-			});
-		} 
+	  const { body } = await superagent
+	   .get('aws.random.cat/meow');
+	   const embed = new Discord.RichEmbed()
+	   .setColor(0x954D23)
+	   .setTitle("Meow :cat:")
+	   .setImage(body.file)
+	   message.channel.send({embed})
 }
