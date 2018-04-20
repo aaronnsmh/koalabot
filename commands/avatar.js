@@ -1,5 +1,5 @@
 
 exports.run = (Discord, client, message, args) => {
-
-message.reply(message.author.avatarURL);
+  let avataruser = message.mentions.members.first();
+  message.reply(avataruser.avatarURL);
 }
