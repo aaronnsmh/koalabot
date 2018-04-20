@@ -7,7 +7,7 @@ if (message.member.hasPermission("ADMINISTRATOR")) {
 		   if (text.length < 1) return message.channel.send("Can not announce nothing");
 		   //const colour = args.slice(2).join("");
 		   const embed = new Discord.RichEmbed()
-		   .setColor(#00ff00")
+		   .setColor("#00ff00")
 		   .setTitle("Announcement:")
 		   .setDescription(text);
 		   message.channel.send({embed})
