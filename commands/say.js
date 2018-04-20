@@ -11,7 +11,7 @@ let allowedRole = message.guild.roles.find("name", "bot admin");
     message.channel.send(sayMessage);
         
        } else {
-         message.channel.send("This command is limited to bot admins only.")
+         message.channel.send("wot u doin? this command is for kewl ppl only (If you think this is wrong, make sure you have the 'bot admin` discord role)")
          message.delete()
          .then(m=>m.delete(10000))
        }
