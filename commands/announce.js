@@ -1,6 +1,8 @@
 exports.run = (Discord, client, message, args) => {
 
-if (message.member.hasPermission("ADMINISTRATOR")) {
+let allowedRole = message.guild.roles.find("name", "bot admin");	
+
+ if(message.member.roles.has(allowedRole.id)) {
 		   const color = args[0]
 				
 		   const text = args.slice(1).join(" ");
