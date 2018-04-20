@@ -12,6 +12,7 @@ if (message.member.hasPermission("ADMINISTRATOR")) {
 		   .setAuthor(author)
 		   .setTitle(":mega: Announcement:")
 		   .setDescription(text);
+		   message.channel.send("Announcement from" + author);
 		   message.channel.send({embed})
 	   }
 }
