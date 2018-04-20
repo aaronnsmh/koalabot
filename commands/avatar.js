@@ -1,7 +1,7 @@
 
 exports.run = (Discord, client, message, args) => {
   var message = '';
-if (m.content.startsWith("!avy")) {
+
     if (m.content.indexOf(' ') !== -1) {
         if (m.mentions) {
             for (var user of m.mentions) {
@@ -17,4 +17,5 @@ if (m.content.startsWith("!avy")) {
         message = m.author.avatarURL;
         bot.sendMessage(m.channel, message);
     }
+
 }
