@@ -11,7 +11,7 @@ if (message.member.hasPermission("ADMINISTRATOR")) {
 		   .setColor("#00ff00")
 		   .setThumbnail("https://t6.rbxcdn.com/fad4c603a443958512e8adb3660ff221")
 		   .setTitle(":mega: Announcement:")
-		   .setDescription(text);
+		   .setDescription(text)
 		   .setFooter("An announcment from " + author + " made at ")
 		   .setTimestamp()
 		   message.channel.send("@everyone");
