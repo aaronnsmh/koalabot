@@ -1,0 +1,10 @@
+{
+	"token": "BOT_TOKEN",
+	"servers": [
+		"334833519840985089"
+	],
+	"roleName": "CUSTOMER",
+	"colors": 12,
+	"speed": 60000,
+	"logging": true
+}
