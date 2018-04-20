@@ -1,4 +1,6 @@
- if (message.member.hasPermission("ADMINISTRATOR")) {
+exports.run = (Discord, client, message, args) => {
+
+if (message.member.hasPermission("ADMINISTRATOR")) {
 		   const color = args[0]
 				
 		   const text = args.slice(1).join(" ");
@@ -11,3 +13,4 @@
 		   message.channel.send("@everyone")
 		   message.channel.send({embed})
 	   }
+}
