@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = 'KC';
 const db = require('quick.db');
-const superagent = require("superagent");
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
 
