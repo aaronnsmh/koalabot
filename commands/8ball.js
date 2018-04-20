@@ -10,7 +10,7 @@ function doMagic8BallVoodoo() {
 		   .setColor("#00ff00")
 		   .setThumbnail("https://pbs.twimg.com/profile_images/178167256/8ball.jpg.jpeg")
 		   .setTitle("Magic 8 ball :8ball:")
-		   .setDescription(doMagic8BallVoodoo())
+		   .newField("Result:","doMagic8BallVoodoo()")
 		   .setFooter("Requested by " + author + " at ")
 		   .setTimestamp()
 		   message.channel.send(":8ball: from: " + author);
