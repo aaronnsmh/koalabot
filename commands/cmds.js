@@ -12,6 +12,7 @@ exports.run = (Discord, client, message, args) => {
         .addField(":o: cointoss", "Tosses a coin.")
         .addField(":frame_photo: avatar [@USER]", "Shows a picture of a tagged persons bootiful avatar!")
         .addField(":loudspeaker: say [STRING]", "The bot says what you ask it to say, well duh.")
+        .addField(":mailbox_with_mail: purge [NUMBER]", "Deletes a specified amount of messages.")
         .addField(":fire: kick/ban [@USER] [REASON]", "The bot kicks/bans the user with the reason you put. Tut tut!")
         .addField(":exclamation: announce [TITLE] [DESCRIPTION]", "Announces whatever you put in the channel you write it in.")
         .addField(":mega:  eannounce [TITLE] [DESCRIPTION]", "Announces whatever you put in the channel you write it in, also tags everyone. ")
