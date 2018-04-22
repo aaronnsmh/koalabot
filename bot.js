@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const prefix = 'KC';
 const db = require('quick.db');
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+const talkedRecently = new Set();
 
 
 client.on('ready', () => {
@@ -48,11 +49,16 @@ client.on('message', message => {
         let cmd = args.shift().toLowerCase();
 
         if (!message.content.startsWith(prefix)) return;
-
+        
         try {
-
+            if (talkedRecently.has(message.author.id))
+        return;
             let commandFile = require(`./commands/${cmd}.js`);
             commandFile.run(Discord, client, message, args);
+            talkedRecently.add(message.author.id);
+setTimeout(() => {
+            talkedRecently.delete(message.author.id);
+}, 2500);
 
         } catch (e) {
 
