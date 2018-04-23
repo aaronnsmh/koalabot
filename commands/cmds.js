@@ -24,6 +24,7 @@ let thumbnail = client.user.avatarURL;
         .addField(":exclamation: announce [TITLE] [DESCRIPTION]", "Announces whatever you put in the channel you write it in.")
         .addField(":exclamation: eannounce [TITLE] [DESCRIPTION]", "Announces whatever you put in the channel you write it in, also tags everyone.")
         .addField(":mailbox_with_mail: purge [NUMBER]", "Deletes a specified amount of messages.")
+        .addField(":warning: Warn [@USER] [REASON]", "Warns the specified user and logs it.")
     message.channel.sendEmbed(embedcmds);
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return
     message.channel.sendEmbed(admin);
