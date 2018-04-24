@@ -17,6 +17,16 @@ client.on('ready', () => {
     client.user.setStatus("online");
 });
 
+client.on("message", message => {
+  const prefixes = ['KC', 'kc', '!'];
+  let prefix = false;
+  for(const thisPrefix of prefixes) {
+    if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
+  }
+  if(!prefix) return;
+
+  // Go ahead with the rest of your code!
+}
 
 client.on('message', message => {
 
