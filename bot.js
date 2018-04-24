@@ -10,7 +10,7 @@ const prefix = 'KC';
    
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    client.user.setActivity('you | KChelp', { type: 'WATCHING' });
+    client.user.setActivity(' over Koala Cafe | KChelp', { type: 'WATCHING' });
     client.user.setStatus("online");
 });
 
