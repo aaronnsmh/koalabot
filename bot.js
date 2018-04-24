@@ -6,6 +6,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
 const prefix = 'KC';
+const { get } = require("snekfetch"); 
 
    
 client.on('ready', () => {
