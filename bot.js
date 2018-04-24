@@ -66,7 +66,7 @@ client.on('guildMemberAdd', member => {
             console.log(`${message.author.username} ran the command: ${cmd} sucessfully!`);
 
         }
-    })
+    
 
 
 
