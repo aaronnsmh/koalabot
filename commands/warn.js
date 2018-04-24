@@ -20,6 +20,5 @@ exports.run = (Discord, client, message, args) => {
             .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
         staffc.send({embed});
         message.channel.send(`**${user.tag}** has been warned successfully for ${reason}`);
-        user.message(`You've been warned in Koala Cafe for **${reason}** by ${message.author.tag}! Tut tut...`);
-        message.user(`You have been warned for **${reason}** by ${message.author.tag}`);
+        user.send(`You've been warned in Koala Cafe for **${reason}** by ${message.author.tag}! Tut tut...`);
 }
