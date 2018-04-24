@@ -1,4 +1,4 @@
-// Koala Bot
+// ibot
 // Version: 0.9 PRE-ALPHA / PRE-REALEASE
 // Discord Code: 
 
@@ -28,7 +28,7 @@ client.on('message', message => {
 
    
    
-   if (message.mentions.members.firstKey() === '383658506060038144') {
+   if (message.mentions.members.firstKey() === '436253576537440256') {
     message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry: My prefix is -')
    }
    
