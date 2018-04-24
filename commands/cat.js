@@ -2,12 +2,6 @@
 
 
 exports.run = (Discord, client, message, args) => {
-	const { body } = await superagent
-	   .get('aws.random.cat/meow');
-	   const embed = new Discord.RichEmbed()
-	   .setColor(0x954D23)
-	   .setTitle("Meow :cat:")
-	   .setImage(body.file)
-message.channel.send({embed})
+message.channel.send(`This command isn't quit purrfect yet and will be coming soon. Meow :cat: )
 
 }
