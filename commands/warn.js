@@ -21,5 +21,5 @@ exports.run = (Discord, client, message, args) => {
         staffc.send({embed});
         message.channel.send(`**${user.tag}** has been warned successfully for ${reason}`);
         user.message(`You've been warned in Koala Cafe for **${reason}** by ${message.author.tag}! Tut tut...`);
-        message.user.send(`You have been warned for **${reason}** by ${message.author.tag}`);
+        message.user(`You have been warned for **${reason}** by ${message.author.tag}`);
 }
