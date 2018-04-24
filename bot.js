@@ -15,7 +15,6 @@ client.on('ready', () => {
 
 
           
-if (sender.bot) return;
 
      if (message.channel.type === 'dm') {
         var embederrordm = new Discord.RichEmbed()
