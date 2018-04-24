@@ -14,6 +14,7 @@ let thumbnail = client.user.avatarURL;
         .addField(":gay_pride_flag:  randomcolor", "Responds with a random hex color.")
         .addField(":o: cointoss", "Tosses a coin.")
         .addField(":frame_photo: avatar [@USER]", "Shows a picture of a tagged persons avatar!")
+        .addField(":koala:  koala", "Posts a random picture of a koala.")
         .addField(":clock1: More CMDS coming soon", "What do you expect me to put here?")
     var admin= new Discord.RichEmbed()
         .setFooter("© " + name + "  | Made by Aaron#1742")
