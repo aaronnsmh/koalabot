@@ -11,14 +11,13 @@ exports.run = (Discord, client, message, args) => {
     const embed = new Discord.RichEmbed()
             .setColor(0x8cff00)
             .setTimestamp()
-            .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
+            .setDescription(`**Action:** Kick\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
         staffc.send({embed});
     message.channel.send(`**${user.tag}** has been kicked successfully for ${reason}`);
     user.send(`You've been warned in Koala Cafe for **${reason}** by ${message.author.tag}! Tut tut...`);
     message.guild.member(kUser).kick(kReason);
     let kickChannel = '419094345858154496';
     let pkickchannel = message.guild.channels.find(`name`, "logs");
-    message.channel.send('User kicked!')
     if (!pkickChannel) return message.channel.send("I can not find the log channel, the user has been kicked. For logs, get the sever admin to make a channel called `logs`.");
 
     
