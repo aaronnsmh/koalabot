@@ -7,6 +7,7 @@ const client = new Discord.Client();
 const db = require('quick.db');
 const prefix = 'KC';
 const { get } = require("snekfetch"); 
+const { body } = await superagent
 
    
 client.on('ready', () => {
