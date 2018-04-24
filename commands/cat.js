@@ -1,8 +1,8 @@
-const { get } = require("snekfetch"); 
+
 
 
 exports.run = (Discord, client, message, args) => {
-	const { body } = await superagent
+	const { body } = require("superagent");
 	   .get('aws.random.cat/meow');
 	   const embed = new Discord.RichEmbed()
 	   .setColor(0x954D23)
