@@ -11,6 +11,7 @@
   "dependencies": {
     "discord.js": "^11.2.1",
     "snekfetch": "^3.6.1",
-    "quick.db": "^5.3.5"
+    "quick.db": "^5.3.5",
+    "superagent": "^1.0.0"
 }
 }
