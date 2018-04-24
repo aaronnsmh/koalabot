@@ -12,7 +12,7 @@ function doMagic8BallVoodoo() {
     const author = message.author;
 		   const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-		   .setThumbnail("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR97vFExM4v0gktH18oMQRdT1NPNySjnyE4YPKWwg7NI_NznOPT")
+		   .setThumbnail(thumbnail)
        .setAuthor(name,thumbnail)
 		   .setTitle("Koala")
        .setImage(doMagic8BallVoodoo())
