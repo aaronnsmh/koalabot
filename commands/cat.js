@@ -2,7 +2,6 @@
 
 
 exports.run = (Discord, client, message, args) => {
-message.channel.send(`This command isn't quit purrfect yet and will be coming soon. Meow :cat: `)
  const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
 		   .setTitle("This command isn't quit purrfect yet and will be coming soon. Meow :cat:")
