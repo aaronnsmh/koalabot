@@ -18,16 +18,22 @@ let thumbnail = client.user.avatarURL;
         .addField(":clock1: More CMDS coming soon", "What do you expect me to put here?")
     var admin= new Discord.RichEmbed()
         .setFooter("© " + name + "  | Made by Aaron#1742")
+        .setTitle("Mod Commands")
+        .setColor(randomColor)
+        .addField(":fire: kick/ban [@USER] [REASON]", "The bot kicks/bans the user with the reason you put. Tut tut!")
+        .addField(":warning: Warn [@USER] [REASON]", "Warns the specified user and logs it.")
+    var admin2= new Discord.RichEmbed()
+        .setFooter("© " + name + "  | Made by Aaron#1742")
         .setTitle("Admin Commands")
         .setColor(randomColor)
         .addField(":loudspeaker: say [STRING]", "The bot says what you ask it to say, well duh.")
-        .addField(":fire: kick/ban [@USER] [REASON]", "The bot kicks/bans the user with the reason you put. Tut tut!")
         .addField(":exclamation: announce [TITLE] [DESCRIPTION]", "Announces whatever you put in the channel you write it in.")
         .addField(":exclamation: eannounce [TITLE] [DESCRIPTION]", "Announces whatever you put in the channel you write it in, also tags everyone.")
-        .addField(":warning: Warn [@USER] [REASON]", "Warns the specified user and logs it.")
     message.channel.sendEmbed(embedcmds);
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return
     message.channel.sendEmbed(admin);
+    if (!message.member.hasPermission("ADMINISTRATOR")) return
+    message.channel.sendEmbed(admin2);
     message.delete(10000)
 
 }
