@@ -22,7 +22,7 @@ let allowedRole = message.guild.roles.find("name", "bot admin");
         const embed = new Discord.RichEmbed()
             .setColor(0x8cff00)
             .setTimestamp()
-            .setDescription(`**Action:** Say\n**Target:** ${user.tag}\n**User:** ${message.author.tag}\n**They said:** ${reason}`);
+            .setDescription(`**Action:** Say\n**User:** ${message.author.tag}\n**They said:** ${reason}`);
         staffc.send({embed});
 
         
