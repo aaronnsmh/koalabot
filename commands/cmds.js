@@ -24,7 +24,7 @@ let thumbnail = client.user.avatarURL;
         .addField(":warning: Warn [@USER] [REASON]", "Warns the specified user and logs it.")
     var admin2= new Discord.RichEmbed()
         .setFooter("© " + name + "  | Made by Aaron#1742")
-        .setTitle("Admin Commands")
+        .setTitle("Bot Admin Commands")
         .setColor(randomColor)
         .addField(":loudspeaker: say [STRING]", "The bot says what you ask it to say, well duh.")
         .addField(":exclamation: announce [TITLE] [DESCRIPTION]", "Announces whatever you put in the channel you write it in.")
