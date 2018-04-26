@@ -33,8 +33,8 @@ client.on('message', message => {
             .setTimestamp()
             .setDescription(`**Action:** Warning\n**Target:** ${message.author.tag}\n**Moderator:** AutoMod\n**Reason:** using a '.'.);
         staffc.send({embed});
-        message.channel.send(`**${message.author.tag}** has been warned successfully for using a '.'`);
-    message.author.send(`You've been warned in Koala Cafe for **${reason}** by ${message.author.tag}! Tut tut...`);
+        message.channel.send("**${message.author.tag}** has been warned successfully for using a '.'");
+    message.author.send("You have been warned in Koala Cafe for **using a '.'.** by ${message.author.tag}! Tut tut...");
 }
 }
     
