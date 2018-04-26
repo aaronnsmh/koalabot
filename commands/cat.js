@@ -17,7 +17,7 @@ function doMagic8BallVoodoo() {
        		   .setAuthor(name,thumbnail)
 		   .addField(`Meow :cat:`,`Credit to: Robloxian_Thinking`)
        		   .setImage(doMagic8BallVoodoo())
-		   .setFooter("Aww! Requested by ${message.author.tag} at ")
+		   .setFooter("Aww! Requested by " + message.author.tag + " at ")
 		   .setTimestamp()
 		   message.channel.send({embed})
     
