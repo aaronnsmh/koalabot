@@ -10,6 +10,7 @@ if(message.mentions.users.first()) { //Check if the message has a mention in it.
     
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
+	  	   .setDescription("Below is the requested avatar!, don't feel bad because its a bit ugly, its no where near as ugly as xXAlishaQueenXx's pfp!")
 		   .setThumbnail(thumbnail)
 		   .setTitle(":frame_photo: Avatar")
 		   .setImage(avatarurl)
