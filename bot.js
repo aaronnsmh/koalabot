@@ -28,13 +28,14 @@ client.on('message', message => {
         message.channel.send("**Unfortunately we can only read things in the Koala Cafe server). The comamnd prefix is 'KC' **")
         return;
     if(message.content == '.') {
+       let user = message.author;
    const embed = new Discord.RichEmbed()
             .setColor(0x8cff00)
             .setTimestamp()
             .setDescription(`**Action:** Warning\n**Target:** ${message.author.tag}\n**Moderator:** AutoMod\n**Reason:** using a '.'.);
         staffc.send({embed});
         message.channel.send("**${message.author.tag}** has been warned successfully for using a '.'");
-    message.author.send("You have been warned in Koala Cafe for **using a '.'.** by ${message.author.tag}! Tut tut...");
+        user.send("You have been warned in Koala Cafe for **using a '.'.** by AutoMod! Tut tut...");
 }
 }
     
