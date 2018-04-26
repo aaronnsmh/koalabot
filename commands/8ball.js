@@ -15,7 +15,7 @@ function doMagic8BallVoodoo() {
 		   .setTimestamp()
 		   message.channel.send(":8ball: from: " + author);
 		   message.channel.send({embed})
-	if (sender.bot) {
+	if (message.author.bot) {
          message.delete(5000)
 }
     
