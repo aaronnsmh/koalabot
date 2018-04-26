@@ -34,7 +34,6 @@ client.on('message', message => {
             .setTimestamp()
             .setDescription(`**Action:** Warning\n**Target:** ${message.author.tag}\n**Moderator:** AutoMod\n**Reason:** using a '.'.);
         staffc.send({embed})
-        message.channel.send("**${message.author}** has been warned successfully for using a '.'")
         user.send("You have been warned in Koala Cafe for **using a '.'.** by AutoMod! Tut tut...")
 }
 }
