@@ -15,9 +15,9 @@ function doMagic8BallVoodoo() {
 		   .setColor("#00ff00")
 		   .setThumbnail(thumbnail)
        		   .setAuthor(name,thumbnail)
-		   .setTitle("Meow :cat: (Made by Robloxian_Thinking)")
+		   .addField(`Meow :cat:`,`Credit to: Robloxian_Thinking`)
        		   .setImage(doMagic8BallVoodoo())
-		   .setFooter("Aww! Requested by " + author + " at ")
+		   .setFooter("Aww! Requested by ${message.author.tag} at ")
 		   .setTimestamp()
 		   message.channel.send({embed})
     
