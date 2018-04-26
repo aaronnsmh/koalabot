@@ -27,6 +27,15 @@ client.on('message', message => {
     if (message.channel.type === 'dm') {
         message.channel.send("**Unfortunately we can only read things in the Koala Cafe server). The comamnd prefix is 'KC' **")
         return;
+    if(message.content == '.') {
+   const embed = new Discord.RichEmbed()
+            .setColor(0x8cff00)
+            .setTimestamp()
+            .setDescription(`**Action:** Warning\n**Target:** ${message.author.tag}\n**Moderator:** AutoMod\n**Reason:** using a '.'.);
+        staffc.send({embed});
+        message.channel.send(`**${message.author.tag}** has been warned successfully for using a '.'`);
+    message.author.send(`You've been warned in Koala Cafe for **${reason}** by ${message.author.tag}! Tut tut...`);
+}
 }
     
 
