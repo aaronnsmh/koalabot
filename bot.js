@@ -29,12 +29,16 @@ client.on('message', message => {
         return;
     if(message.content == '.') {
        let user = message.author;
-   const embed = new Discord.RichEmbed()
+       let reason = args.slice(1).join(" ");
+       let user = message.mentions.users.first();
+       let staffc = message.guild.channels.find("name", "logs")
+       const embed = new Discord.RichEmbed()
             .setColor(0x8cff00)
             .setTimestamp()
-            .setDescription(`**Action:** Warning\n**Target:** ${message.author.tag}\n**Moderator:** AutoMod\n**Reason:** using a '.'.);
-        staffc.send({embed})
-        user.send("You have been warned in Koala Cafe for **using a '.'.** by AutoMod! Tut tut...")
+            .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
+        staffc.send({embed});
+        message.channel.send(`**${user.tag}** has been warned successfully for ${reason}`);
+        user.send(`You've been warned in Koala Cafe for **${reason}** by ${message.author.tag}! Tut tut...`);
 }
 }
     
