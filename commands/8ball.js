@@ -22,6 +22,7 @@ function doMagic8BallVoodoo() {
 		   .setFooter("Requested by " + message.author.tag + " at ")
 		   .setTimestamp()
 		   message.channel.send({embed})
+		   message.channel.send(question)
 	if (message.author.bot) {
          message.delete(5000)
 }
