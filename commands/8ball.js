@@ -5,6 +5,10 @@ function doMagic8BallVoodoo() {
 
     return rand[Math.floor(Math.random()*rand.length)];
 }
+	
+	if (reason.length < 1) 
+	return message.reply('Please ask 8ball a yes/no question.');
+	
      const author = message.author;
 		   let reason = args.slice(0).join(" ");
 		   let authorname = message.author.tag
