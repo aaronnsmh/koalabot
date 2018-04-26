@@ -9,9 +9,7 @@ function doMagic8BallVoodoo() {
 	if (reason.length < 1) 
 	return message.reply('Please ask 8ball a yes/no question.');
 	
-     const author = message.author;
-     const reason = args.slice(0).join(" ");
-     const authorname = message.author.tag
+
 		   const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
 		   .setThumbnail("https://pbs.twimg.com/profile_images/178167256/8ball.jpg.jpeg")
