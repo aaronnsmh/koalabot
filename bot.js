@@ -30,7 +30,6 @@ client.on('message', message => {
     if(message.content == '.') {
        let user = message.author;
        let reason = args.slice(1).join(" ");
-       let user = message.mentions.users.first();
        let staffc = message.guild.channels.find("name", "logs")
        const embed = new Discord.RichEmbed()
             .setColor(0x8cff00)
