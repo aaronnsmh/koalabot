@@ -6,7 +6,7 @@ function doMagic8BallVoodoo() {
     return rand[Math.floor(Math.random()*rand.length)];
 }
 	
-	if (reason.length < 1) 
+	if (args.slice(0).join(" ").length < 1) 
 	return message.reply('Please ask 8ball a yes/no question.');
 	
 
