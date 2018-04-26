@@ -6,12 +6,17 @@ function doMagic8BallVoodoo() {
     return rand[Math.floor(Math.random()*rand.length)];
 }
      const author = message.author;
+		   let reason = args.slice(0).join(" ");
+		   let authorname = message.author.tag
 		   const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
 		   .setThumbnail("https://pbs.twimg.com/profile_images/178167256/8ball.jpg.jpeg")
 		   .setTitle("Magic 8 ball :8ball:")
+		   .addBlankField(true)
+		   .addField(authorname + "Asked 8ball: " + "**" + reason + "**")
 		   .addField("Result:",doMagic8BallVoodoo())
-		   .setFooter("Requested by " + author + " at ")
+		   .addBlankField(true)
+		   .setFooter("Requested by " + message.author.tag + " at ")
 		   .setTimestamp()
 		   message.channel.send(":8ball: from: " + author);
 		   message.channel.send({embed})
