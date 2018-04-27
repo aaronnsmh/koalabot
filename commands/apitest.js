@@ -6,4 +6,4 @@ module.exports.run = async (bot, Discord, client, message, args) => {
     
     message.channel.send(body.url);
 });
-}
+
