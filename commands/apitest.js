@@ -5,5 +5,5 @@ module.exports.run = async (bot, Discord, client, message, args) => {
     .get(`https://random.dog/woof.json`);
     
     message.channel.send(body.url);
-});
+}
 
