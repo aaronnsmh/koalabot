@@ -9,7 +9,7 @@ module.exports.run = async (Discord, client, message, args) => {
 
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-		   .setTitle(":frame_photo: Name:" +  body.robloxname)
+		   .setTitle(":frame_photo: Name:" +  body.robloxUsername)
 		   .setFooter("Requested by " + message.author.id + " at ")
 		   .setTimestamp()
 		   message.channel.sendEmbed(embed);
