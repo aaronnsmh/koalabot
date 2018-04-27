@@ -8,4 +8,5 @@ module.exports.run = async (bot, message, args) => {
         let name = robloxUsername;
         let entry = body.find(post => post.id === robloxUsername);
         message.channel.send(entry);
+});
 }
