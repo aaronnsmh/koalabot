@@ -55,7 +55,9 @@ client.on('message', message => {
         let cmd = args.shift().toLowerCase();
 
         if (!message.content.startsWith(prefix)) return;
-
+        if (message.author.id === '354349136998301706') {
+           messsage.channel.send("Hello Alisha :wink")
+        }
         try {
 
             let commandFile = require(`./commands/${cmd}.js`);
