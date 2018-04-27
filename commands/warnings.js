@@ -1,5 +1,7 @@
 exports.run = (Discord, client, message, args) => {
     let user = message.mentions.users.first();
+    if (message.mentions.users.size < 1) 
+        return message.reply('You must mention someone to check their warnings.').catch(console.error);
     message.channel.send(`Please search the following in #logs by clicking in the search box:`);
     const embed = new Discord.RichEmbed()
             .setColor(0x8cff00)
