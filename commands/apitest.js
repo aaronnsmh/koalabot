@@ -4,8 +4,8 @@ module.exports.run = async (bot, message, args) => {
     const id = 281060171730649089
     const api = "https://verify.eryn.io/api/user/113691352327389188";
     snekfetch.get(api).then(r => {
-        Let body = r.body;
-        Let name = robloxUsername;
-        Let entry = body.find(post.id === robloxUsername);
+        let body = r.body;
+        let name = robloxUsername;
+        let entry = body.find(post => post.id === robloxUsername);
         message.channel.send(entry);
 }
