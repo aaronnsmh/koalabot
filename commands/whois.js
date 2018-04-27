@@ -5,7 +5,7 @@ if(message.mentions.users.first()) { //Check if the message has a mention in it.
           let robloxname = body.robloxUsername;
           let userid = body.robloxId;
           let author = message.author;
-          let url = "https://verify.eryn.io/api/user/" + message.author")
+          let url = "https://verify.eryn.io/api/user/" + message.author");
           message.channel.send(url)
           
     const superagent = require("superagent");
