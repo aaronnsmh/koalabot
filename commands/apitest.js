@@ -1,12 +1,9 @@
 
-const snekfetch = require("snekfetch");
+const superagent = require("superagent");
 module.exports.run = async (bot, Discord, client, message, args) => {
-    const api = "https://verify.eryn.io/api/user/113691352327389188";
-    snekfetch.get(api).then(r => {
-        let body = r.body;
-        let id = robloxUsername;
-        let robloxUsername = robloxUsername;
-        let entry = body.find(post => post.robloxUsername = id);
-        console.log(entry);
+    let {body} = await superagent
+    .get(`https://random.dog/woof.json`);
+    
+    message.channel.send(body.url);
 });
 }
