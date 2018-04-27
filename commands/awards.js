@@ -22,10 +22,10 @@ exports.run = (Discord, client, message, args) => {
 		   .addField("Balcony Seats","https://www.roblox.com/catalog/1665321683/Koala-Awards-Balcony-Seating")
 		   .addField("Front Row Seats","https://www.roblox.com/catalog/1665327124/Koala-Awards-Front-Row-Seating")
 		   
-		  const 1embed = new Discord.RichEmbed()
+		  const embedtwo = new Discord.RichEmbed()
 		   .setColor("#e8a60d")
 		   .setImage("https://media.discordapp.net/attachments/438401144147017748/439474846733303808/unknown.png")
-		   message.channel.send({1embed})
+		   message.channel.send({embedtwo})
 		   message.channel.send({embed})
 	   
 }
