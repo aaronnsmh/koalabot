@@ -6,6 +6,6 @@ module.exports.run = async (bot, Discord, client, message, args) => {
         let body = r.body;
         let id = 1;
         let entry = body.find(post => post.id === id);
-        message.channel.send(entry);
+        console.log(entry);
 });
 }
