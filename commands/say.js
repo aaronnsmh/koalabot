@@ -2,6 +2,7 @@ exports.run = (Discord, client, message, args) => {
 
 let sender = message.author;
 let allowedRole = message.guild.roles.find("name", "bot admin");
+let sendchannel = message.channel;
 
        if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("wot u doin? this command is for kewl ppl only (If you think this is wrong, make sure you have the administrator discord permission)")
 
@@ -23,7 +24,7 @@ let allowedRole = message.guild.roles.find("name", "bot admin");
         const embed = new Discord.RichEmbed()
             .setColor(0x8cff00)
             .setTimestamp()
-            .setDescription(`**Action:** Say\n**User:** ${message.author.tag}\n**They said:** ${reason}`);
+            .setDescription(`**Action:** Say\n**User:** ${message.author.tag}\n**They said:** ${reason}\n**In Channel:** ${sendchannel}`);
         staffc.send({embed});
 
         
