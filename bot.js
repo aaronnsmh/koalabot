@@ -56,7 +56,7 @@ client.on('message', message => {
 
         if (!message.content.startsWith(prefix)) return;
         if (message.author.id === '354349136998301706') {
-           messsage.channel.send("Hello Alisha :wink")
+        message.channel.send('Uh oh, it looks like you are bot blacklisted!')
         }
         try {
 
