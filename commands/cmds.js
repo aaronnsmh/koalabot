@@ -22,6 +22,7 @@ let thumbnail = client.user.avatarURL;
         .setColor(randomColor)
         .addField(":fire: kick/ban [@USER] [REASON]", "The bot kicks/bans the user with the reason you put. Tut tut!")
         .addField(":warning: Warn [@USER] [REASON]", "Warns the specified user and logs it.")
+        .addField(":warning: Warnings [@USER]", "Tells you what to search for in #logs to check someones warnings.")
     var admin2= new Discord.RichEmbed()
         .setFooter("© " + name + "  | Made by Aaron#1742")
         .setTitle("Admin Commands")
