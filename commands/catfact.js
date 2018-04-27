@@ -1,11 +1,9 @@
 
 const superagent = require("superagent");
-exports.run = async (bot, Discord, client, message, args) => {
+exports.run = async (Discord, client, message, args) => {
 
     let {body} = await superagent
     .get(`https://catfact.ninja/fact`);
-
-}
-exports.run = (bot, Discord, client, message, args) => {
-message.reply(body.fact)
+    let fact = body.fact
+    message.reply(fact)
 }
