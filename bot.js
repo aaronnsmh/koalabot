@@ -7,6 +7,7 @@ const client = new Discord.Client();
 const db = require('quick.db');
 const prefix = 'KC';
 const { get } = require("snekfetch"); 
+const superagent = require("superagent");
 
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
    
