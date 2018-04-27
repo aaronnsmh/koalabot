@@ -2,7 +2,7 @@
 
 const superagent = require("superagent");
 module.exports.run = async (bot, Discord, client, message, args) => {
-    let address = args.slice(0).join(" ");
+    let address = message.author;
     let {body} = await superagent
     let site = "https://verify.eryn.io/api/user/" + address
     .get(`https://verify.eryn.io/api/user/` + address);
