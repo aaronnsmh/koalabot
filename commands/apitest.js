@@ -6,6 +6,6 @@ module.exports.run = async (bot, message, args) => {
         let body = r.body;
         let id = Number(args[0]);
         let entry = body.find(post => post.id === id);
-        message.reply(entry);
+        message.channel.send(entry);
 });
 }
