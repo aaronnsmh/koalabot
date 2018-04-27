@@ -3,7 +3,7 @@
 module.exports.run = async (Discord, client, message, args) => {
     let {body} = await superagent
     let id = args.slice(0).join(" ");
-    let url = "https://verify.eryn.io/api/user/${args.slice(0).join(" ")}"
+    let url = "https://verify.eryn.io/api/user/" + args.slice(0).join(" ");
     .get(`url`);
     console.log(body.robloxUsername)
 
