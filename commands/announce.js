@@ -2,7 +2,7 @@ exports.run = (Discord, client, message, args) => {
 
 let allowedRole = message.guild.roles.find("name", "bot admin");	
 
- if(message.member.roles.has(allowedRole.id)) {
+       if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("wot u doin? this command is for kewl ppl only (If you think this is wrong, make sure you have the administrator discord permission)")
 		   const color = args[0]
 				
 		   const text = args.slice(1).join(" ");
@@ -18,9 +18,5 @@ let allowedRole = message.guild.roles.find("name", "bot admin");
 		   .setTimestamp()
 		   message.channel.send("Announcement from: " + author);
 		   message.channel.send({embed})
-	   }
-else {
-	message.channel.send("You need to have the 'bot admin' role to announce!")
-	return;
-}
+	   
 }
