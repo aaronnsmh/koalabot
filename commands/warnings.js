@@ -1,4 +1,5 @@
 exports.run = (Discord, client, message, args) => {
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No can do pal!");
     let user = message.mentions.users.first();
     if (message.mentions.users.size < 1) 
         return message.reply('You must mention someone to check their warnings.').catch(console.error);
