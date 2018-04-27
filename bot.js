@@ -55,9 +55,7 @@ client.on('message', message => {
         let cmd = args.shift().toLowerCase();
 
         if (!message.content.startsWith(prefix)) return;
-        if (message.author.id === '354349136998301706') {
-        message.channel.send('Uh oh, it looks like you are bot blacklisted!')
-        }
+        
         try {
 
             let commandFile = require(`./commands/${cmd}.js`);
