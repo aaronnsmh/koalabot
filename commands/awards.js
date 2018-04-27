@@ -24,7 +24,7 @@ exports.run = (Discord, client, message, args) => {
 		   .setColor("#e8a60d")
 		   .setTitle("1ST KOALA AWARDS")
 		   .setImage("https://media.discordapp.net/attachments/438401144147017748/439474846733303808/unknown.png")
-		   message.channel.send({embedtwo})
+		   message.channel.sendEmbed(embedtwo)
 		   message.channel.send({embed})
 	   
 }
