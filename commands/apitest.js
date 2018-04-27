@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     snekfetch.get(api).then(r => {
         let body = r.body;
         let name = robloxUsername;
-        let entry = body.find(post => post.id === robloxUsername);
+        let entry = body.find(post => post.id === name);
         message.channel.send(entry);
 });
 }
