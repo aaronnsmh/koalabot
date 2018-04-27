@@ -1,11 +1,10 @@
 
 const snekfetch = require("snekfetch");
 module.exports.run = async (bot, Discord, client, message, args) => {
-    const api = "http://jsonplaceholder.typicode.com/posts";
+    const api = "https://verify.eryn.io/api/user/113691352327389188";
     snekfetch.get(api).then(r => {
         let body = r.body;
-        let id = 1;
-        let entry = body.find(post => post.id === id);
+        let entry = body.find(post.robloxUsername);
         console.log(entry);
 });
 }
