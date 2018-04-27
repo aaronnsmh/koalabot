@@ -1,6 +1,6 @@
 
 const snekfetch = require("snekfetch");
-module.exports.run = async (bot, message, args) => {
+module.exports.run = async (bot, Discord, client, message, args) => {
     const api = "http://jsonplaceholder.typicode.com/posts";
     snekfetch.get(api).then(r => {
         let body = r.body;
