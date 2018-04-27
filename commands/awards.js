@@ -8,7 +8,6 @@ exports.run = (Discord, client, message, args) => {
 		   //const colour = args.slice(2).join("");
 		   const embed = new Discord.RichEmbed()
 		   .setColor("#e8a60d")
-		   .setThumbnail("https://lh4.googleusercontent.com/-6D3fVwBHe-TTG7uXUJS0AvqPopJKVFsUStzGacUdANfVszhXYuydMjeNALCukJbqv52L2lMO5GU4w=w1920-h949")
 		   .setTitle("Details")
 		   .setDescription("The 1st annual Koala Awards are happening tomorrow, and we're excited to be celebrating our achivments with you. Below are some details about the awards as well as infomation on where to buy tickets!")
 		   .setFooter("SATURDAY, 4/28 5:00PM EASTERN")
