@@ -9,7 +9,7 @@ exports.run = async (Discord, client, message, args) => {
 	.get(url);
 	let username = body.robloxUsername;
 	let id = body.robloxId;
-	let avatarurl = "https://www.roblox.com/Thumbs/Avatar.ashx?x=600&y=600&userid=" + id;
+	let avatarurl = "https://www.roblox.com/Thumbs/Avatar.ashx?x=400&y=400&userid=" + id;
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
 		   .setTitle(":video_game: Get Info")
