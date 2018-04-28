@@ -9,11 +9,13 @@ exports.run = async (Discord, client, message, args) => {
 	let {body} = await superagent
 	.get(url);
 	let username = body.robloxUsername;
+	let id = body.robloxId;
     	console.log(body.username)
 	message.channel.send(message.author.id)
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-		   .setTitle(":frame_photo: Name:" +  username)
+		   .setTitle(":video_game: Get Info for:" +  reason1)
+	  	   .setDescription("**Roblox Name: **\n${username}\n**Roblox ID:**\n${id}")
 		   .setFooter("Requested by " + message.author.id + " at ")
 		   .setTimestamp()
 		   message.channel.sendEmbed(embed);
