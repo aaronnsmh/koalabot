@@ -13,7 +13,7 @@ exports.run = async (Discord, client, message, args) => {
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
 		   .setTitle(":video_game: Get Info")
-	  	   .setDescription("**Roblox Name: **\n" + username + "\n**Roblox ID:**\n" + id + "\n **Profile Link:** \n" + "https://www.roblox.com/users/170493518/" + id)
+	  	   .setDescription("**Roblox Name: **\n" + username + "\n**Roblox ID:**\n" + id + "\n**Profile Link:** \n" + "https://www.roblox.com/users/170493518/" + id)
 		   .setFooter("Requested by " + message.author.id + " at ")
 		   .setTimestamp()
 	  	   .setImage(avatarurl)
