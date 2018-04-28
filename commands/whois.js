@@ -10,7 +10,7 @@ exports.run = async (Discord, client, message, args) => {
 	let username = body.robloxUsername;
 	let id = body.robloxId;
 	let avatarurl = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userid=" + id;
-	let groupurlbase = "https://www.roblox.com/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRole&groupid=937709&playerid=";
+	let groupurlbase = https://www.roblox.com/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRole&groupid=937709&playerid=;
 	let groupurl = groupurlbase + id;
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
