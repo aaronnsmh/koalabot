@@ -3,7 +3,8 @@
 const superagent = require("superagent");
 exports.run = async (Discord, client, message, args) => {
 	let baseurl = "https://verify.eryn.io/api/user/"
-    	let reason = args.slice(0).join(" ");
+    	let reason1 = message.mentions.users.first();
+	let reason = reason1.id;
 	const url = baseurl + reason;
 	let {body} = await superagent
 	.get(url);
