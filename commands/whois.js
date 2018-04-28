@@ -12,7 +12,7 @@ exports.run = async (Discord, client, message, args) => {
 	let id = body.robloxId;
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-		   .setTitle(":video_game: Get Info for: " + message.mentions.users.first();)
+		   .setTitle(":video_game: Get Info")
 	  	   .setDescription("**Roblox Name: **\n" + username + "\n**Roblox ID:**\n" + id)
 		   .setFooter("Requested by " + message.author.id + " at ")
 		   .setTimestamp()
