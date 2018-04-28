@@ -7,7 +7,7 @@ exports.run = async (Discord, client, message, args) => {
 	const url = baseurl + userid;
 	let {body} = await superagent
 	.get(url);
-	let username body.robloxUsername
+	let username = body.robloxUsername;
     	console.log(body.username)
 
           const embed = new Discord.RichEmbed()
