@@ -2,8 +2,8 @@
     const superagent = require("superagent");
 module.exports.run = async (Discord, client, message, args) => {
     let {body} = await superagent
-    let id = args.slice(0).join(" ");
-    let url = "https://verify.eryn.io/api/user/" + args.slice(0).join(" ");
+    let baseurl = "https://verify.eryn.io/api/user/"
+    let userid = message.mentions.users.first();
     .get(url);
     console.log(body.robloxUsername)
 
