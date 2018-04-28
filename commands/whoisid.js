@@ -8,11 +8,15 @@ exports.run = async (Discord, client, message, args) => {
 	.get(url);
 	let username = body.robloxUsername;
 	let id = body.robloxId;
+	let avatarurl = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userid=" + id;
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
 		   .setTitle(":video_game: Get Info")
 	  	   .setDescription("**Roblox Name: **\n" + username + "\n**Roblox ID:**\n" + id)
 		   .setFooter("Requested by " + message.author.id + " at ")
+	  	   .setImage(avatarurl)
 		   .setTimestamp()
 		   message.channel.sendEmbed(embed);
 }
+
+
