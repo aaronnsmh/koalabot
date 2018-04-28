@@ -9,6 +9,7 @@ exports.run = async (Discord, client, message, args) => {
 	.get(url);
 	let username = body.robloxUsername;
 	let id = body.robloxId;
+	if (id.length > 4) return message.reply('Please verify with KCverify.');
 	let avatarurl = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userid=" + id;
 	let groupurlbase = "https://www.roblox.com/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRole&groupid=937709&playerid=";
 	let groupurl = groupurlbase + id;
