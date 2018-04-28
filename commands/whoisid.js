@@ -8,7 +8,6 @@ exports.run = async (Discord, client, message, args) => {
 	.get(url);
 	let username = body.robloxUsername;
 	let id = body.robloxId;
-	message.channel.send(reason1)
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
 		   .setTitle(":video_game: Get Info")
