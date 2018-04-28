@@ -10,11 +10,10 @@ exports.run = async (Discord, client, message, args) => {
 	.get(url);
 	let username = body.robloxUsername;
 	let id = body.robloxId;
-	message.channel.send("**Roblox Name: **\n${username}\n**Roblox ID:**\n${id}")
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
 		   .setTitle(":video_game: Get Info for:" + reason1)
-	  	   .setDescription("**Roblox Name: **\n${username}\n**Roblox ID:**\n${id}")
+	  	   .setDescription("**Roblox Name: **\n" + username + "\n**Roblox ID:**\n" + id)
 		   .setFooter("Requested by " + message.author.id + " at ")
 		   .setTimestamp()
 		   message.channel.sendEmbed(embed);
