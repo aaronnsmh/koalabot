@@ -5,7 +5,7 @@ exports.run = async (Discord, client, message, args) => {
 	let {body} = await superagent
 	let baseurl = "https://verify.eryn.io/api/user/"
     	let userid = message.mentions.users.first();
-	let url = baseurl + userid
+	const url = baseurl + userid
     	.get(url);
     	console.log(body.robloxUsername)
 
