@@ -4,12 +4,12 @@ exports.run = async (Discord, client, message, args) => {
 	let baseurl = "https://verify.eryn.io/api/user/"
     	let reason1 = message.mentions.users.first();
 	let reason = reason1.id;
-	let id = 2
+	const id = 2
 	const url = baseurl + reason;
 	let {body} = await superagent
 	.get(url);
 	let username = body.robloxUsername;
-	let id = body.robloxId;
+	const id = body.robloxId;
 	if (id.length < 1) 
 		return message.reply('You are not verified yet! Please verify with KCverify.');
 	let avatarurl = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userid=" + id;
