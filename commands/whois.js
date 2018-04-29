@@ -19,7 +19,6 @@ exports.run = async (Discord, client, message, args) => {
 	  	   .setDescription("**Roblox Name: **\n" + username + "\n**Roblox ID:**\n" + id + "\n**Profile Link:** \n" + "https://www.roblox.com/users/" + id + "\n**Rank In Group:**\n" + groupurl)
 		   .setFooter("Requested by " + message.author + " at ")
 		   .setTimestamp()
-	  	   .setImage(avatarurl)
 	  	   .setThumbnail(avatarurl)
 		   message.channel.sendEmbed(embed);
 }
