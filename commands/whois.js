@@ -4,7 +4,6 @@ exports.run = async (Discord, client, message, args) => {
 	let baseurl = "https://verify.eryn.io/api/user/"
     	let reason1 = message.mentions.users.first();
 	let reason = reason1.id;
-	const id = 2
 	const url = baseurl + reason;
 	let {body} = await superagent
 	.get(url);
