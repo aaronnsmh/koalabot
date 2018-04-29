@@ -20,5 +20,6 @@ exports.run = async (Discord, client, message, args) => {
 		   .setFooter("Requested by " + message.author + " at ")
 		   .setTimestamp()
 	  	   .setImage(avatarurl)
+	  	   .setThumbnail(avatarurl)
 		   message.channel.sendEmbed(embed);
 }
