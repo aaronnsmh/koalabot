@@ -9,7 +9,7 @@ exports.run = async (Discord, client, message, args) => {
     const embed = new Discord.RichEmbed()
             .setColor(0x8cff00)
             .setTimestamp()
-            .setDescription(`Gif:` + search ` , requested by: ` +  message.author.id)
+            .setDescription(`Gif:` + search + ` , requested by: ` +  message.author.id)
             .setImage(url)
            message.channel.send({embed});
 }
