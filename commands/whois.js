@@ -9,7 +9,7 @@ exports.run = async (Discord, client, message, args) => {
 	let {body} = await superagent
 	.get(url);
 	let username = body.robloxUsername;
-	const id = body.robloxId;
+	let id = body.robloxId;
 	if (id.length < 1) 
 		return message.reply('You are not verified yet! Please verify with KCverify.');
 	let avatarurl = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userid=" + id;
