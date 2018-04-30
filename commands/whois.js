@@ -9,7 +9,7 @@ exports.run = async (Discord, client, message, args) => {
 	.get(url);
 	let id = body.robloxId;
 	let {rank} = await superagent
-	.get"(https://www.roblox.com/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRole&groupid=937709&playerid=" + id);
+	.get("https://www.roblox.com/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRole&groupid=937709&playerid=" + id);
 	let username = body.robloxUsername;
 	if (id.length < 1) 
 		return message.reply('You are not verified yet! Please verify with KCverify.');
