@@ -7,8 +7,10 @@ exports.run = async (Discord, client, message, args) => {
 	const url = baseurl + reason;
 	let {body} = await superagent
 	.get(url);
-	let username = body.robloxUsername;
 	let id = body.robloxId;
+	let {rank} = await superagent
+	.get"(https://www.roblox.com/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRole&groupid=937709&playerid=" + id);
+	let username = body.robloxUsername;
 	if (id.length < 1) 
 		return message.reply('You are not verified yet! Please verify with KCverify.');
 	let avatarurl = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userid=" + id;
@@ -16,7 +18,7 @@ exports.run = async (Discord, client, message, args) => {
 	let groupurl = groupurlbase + id;
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-	  	   .setDescription("**Roblox Name: **\n" + username + "\n**Roblox ID:**\n" + id + "\n**Profile Link:** \n" + "https://www.roblox.com/users/" + id + "\n**Rank In Group:**\n" + groupurl)
+	  	   .setDescription("**Roblox Name: **\n" + username + "\n**Roblox ID:**\n" + id + "\n**Profile Link:** \n" + "https://www.roblox.com/users/" + id + "\n**Rank In Group:**\n" + rank)
 		   .setFooter("Requested by " + message.author + " at ")
 		   .setTimestamp()
 	  	   .setThumbnail(avatarurl)
