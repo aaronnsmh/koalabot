@@ -22,6 +22,7 @@ const quiz = [
   { q: "How many lines should a limerick have?", a: ["5", "five"] },
   { q: "What is the most basic language Microsoft made?", a: ["visual basic"] },
   { q: "What is the most complicated language?", a: ["binary"] },
+  { q: "Is the earth flat?", a: ["yes", "mhm"] },
   { q: "'OS' computer abbreviation usually means?", a: ["operating system"] }
 ];
 const options = {
