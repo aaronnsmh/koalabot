@@ -45,7 +45,7 @@ client.on('message', message => {
    
    
    if (message.mentions.members.firstKey() === '436253576537440256') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry: My prefix is `KC`(thanks to SuperRussia for the idea)')
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry: My prefix is `KC')
    }
    
 
