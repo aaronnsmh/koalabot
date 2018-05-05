@@ -48,7 +48,11 @@ client.on('message', message => {
     message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry: My prefix is `KC')
    }
    
+   
 
+   if (message.mentions.members.firstKey() === '281060171730649089') {
+    message.channel.send('Thanks for tagging aaron! he will get back to you soon!')
+   }
 
         let msg = message.content.toLowerCase();
         let args = message.content.slice(prefix.length).trim().split(" ");
