@@ -51,7 +51,7 @@ client.on('message', message => {
    
 
    if (message.mentions.members.firstKey() === '281060171730649089') {
-    message.channel.send('Thanks for tagging aaron! he will get back to you soon!')
+    message.channel.send('Thanks for tagging Aaron! He will get back to you soon!')
    }
 
         let msg = message.content.toLowerCase();
