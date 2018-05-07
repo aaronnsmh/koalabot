@@ -5,7 +5,7 @@ exports.run = async (Discord, client, message, args) => {
   
     
   var admin= new Discord.RichEmbed()
-        .setTitle("Poll: " + What game do you want to play?)
+        .setTitle("Poll: " + "What game do you want to play?")
         .setDescription("React below with 1, 2 or 3!")
         .addField("Vote 1:", "args[1]")
         .addField("Vote 2:", "args[1]")
