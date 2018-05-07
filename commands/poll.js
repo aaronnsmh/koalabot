@@ -14,7 +14,7 @@ exports.run = async (Discord, client, message, args) => {
         .setTimestamp()
     message.channel.sendEmbed(admin);
     const pollTopic = await message.channel.sendEmbed(admin);
-    pollTopic.react(`1️⃣`);
-    pollTopic.react(`2️⃣`);
-    pollTopic.react(`3️⃣`);
+    pollTopic.react(`:one:`);
+    pollTopic.react(`:two:');
+    pollTopic.react(`:three:`);
 };
