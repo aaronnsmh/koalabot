@@ -15,6 +15,6 @@ exports.run = async (Discord, client, message, args) => {
     message.channel.sendEmbed(admin);
     const pollTopic = await message.channel.sendEmbed(admin);
     pollTopic.react(`:one:`);
-    pollTopic.react(`:two:');
+    pollTopic.react(`:two:`);
     pollTopic.react(`:three:`);
 };
