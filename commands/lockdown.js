@@ -1,5 +1,6 @@
 const ms = require('ms');
 exports.run = (client, message, args) => {
+  message.channel.createWebhook("Muted", "https://i.imgur.com/p2qNFag.png")
   if (!client.lockit) client.lockit = [];
   let time = args.join(' ');
   let validUnlocks = ['release', 'unlock'];
