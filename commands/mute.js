@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 exports.run = (Discord, client, message, args) => {
+  message.channel.createWebhook("Muted", "https://i.imgur.com/p2qNFag.png")
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
   let modlog = client.channels.find('name', 'logs');
