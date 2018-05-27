@@ -17,8 +17,8 @@ roblox.login({username: process.env.username, password: process.env.password}).t
 				roblox.getRankInGroup(groupId, id)
 			        
 				.then(function(rank){
-					if(maximumRank => rank){
-						message.channel.send(`${id} is rank ${rank} and not demotable.`)
+					if(maximumRank = 0){
+						console.log("test")
 					} else {
 						roblox.demote(groupId, id)
 						
