@@ -20,7 +20,8 @@ roblox.login({username: process.env.username, password: process.env.password}).t
 					if(maximumRank <= rank){
 						message.channel.send(`${id} is rank ${rank} and not passable.`)
 					} else {
-						roblox.changeRank(groupId, id, 2)
+						let name = "Trainee";
+						roblox.setRank(groupId, id, name)
 						
 						.then(function(roles){
 							message.channel.send(`Passed user ${username}, rank changed from ${roles.oldRole.Name} to ${roles.newRole.Name}`)
