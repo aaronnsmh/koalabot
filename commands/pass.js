@@ -10,7 +10,7 @@ roblox.login({username: process.env.username, password: process.env.password}).t
 
 }).catch(() => {console.log("Failed to login.");});
 
-    var username = args[1];
+    var username = args[0];
     var targetRank = 4;
     if (username){
         message.channel.send(`Checking ROBLOX for ${username}`)
