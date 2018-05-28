@@ -10,6 +10,7 @@ roblox.login({username: process.env.username, password: process.env.password}).t
 
 }).catch(() => {console.log("Failed to login.");});
 
+    var user = args[0];
     var username = args[0];
     var targetRank = 4;
     if (username){
