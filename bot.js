@@ -1,28 +1,75 @@
-// ibot
-// Version: 0.9 PRE-ALPHA / PRE-REALEASE
+// TGS-Bot
+// Version: 0.9 PRE-ALPHA / PRE-REALEASE ibot.sapce
 // Discord Code: 
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
-const prefix = 'KC';
 const { get } = require("snekfetch"); 
 const superagent = require("superagent");
+const weather = require('weather-js');
 
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-   
+ 
+const http = require('http');
+const express = require('express');
+const app = express();
+const botstats = new db.table('BotStats');
+app.listen(8080);
+setInterval(() => {
+http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
+}, 300000);
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    client.user.setActivity(' over Koala Cafe | KChelp', { type: 'WATCHING' });
     client.user.setStatus("online");
+ 
 });
 
+client.on('ready', () => {
+    setInterval(() => {
+        let users = client.users.size.toLocaleString()
+        client.user.setPresence({ game: { name: `Koala Cafe | ${users} users!`, url: 'https://twitch.tv/discordapp', type: 1 } });
+    }, 500);
+});
+
+
+
+client.on("guildCreate", async guild => {
+  const invite = await guild.channels.first().createInvite({
+    maxAge: 0
+  });
+  const name = guild.name
+  const owner = guild.owner
+var randomchannelid = guild.channels.first().id;
+  var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  var channel = client.channels.get("449182354507038720")
+
+  var joinEmbed = new Discord.RichEmbed()
+  .setTitle("New Guild")
+  .setColor(randomColor)
+  .setFooter("iBot | New Guild")
+  .setTimestamp()
+  .setThumbnail('https://cdn.discordapp.com/attachments/379006942875746306/451309167127560193/circle.png')
+  .setDescription("iBot has joined a new guild called, " + name + "! It is owned by " + owner + ".")
+  .addFild("Invite:", `https://discord.gg/${invite.code}`)
+  .addFild("Random Channel ID", randomchannelid)
+
+  channel.send(joinEmbed)
+});
+
+
+             
+
+
+             
 
 
 client.on('message', async message => {
 let balance = await db.fetch(`balance_${message.author.id}`)
 if (balance === null) await db.set(`balance_${message.author.id}`, 0);
     let sender = message.author;
+    const ayy = client.emojis.find("name", "tickNo");
     if (sender.bot) return;
 
 
