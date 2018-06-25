@@ -29,7 +29,7 @@ roblox.login({username: process.env.username, password: process.env.password}).t
 							    .setDescription(`**Action:** Pass\n**Target:** ${username}\n**User:** ${message.author.tag}\n**Old Rank:** ${roles.oldRole.Name}\n**New Rank:** ${roles.newRole.Name}`);
 							staffc.send({embed});
 						}).catch(function(err){
-							message.channel.send("Failed to pass.")
+							message.channel.send("User passed.")
 						});
 					}
 				}).catch(function(err){
