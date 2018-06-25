@@ -20,7 +20,7 @@ roblox.login({username: process.env.username, password: process.env.password}).t
 					if(maximumRank <= rank){
 						message.channel.send(`${id} is rank ${rank} and not fireable.`)
 					} else {
-						roblox.setRank(groupId, id, 1)
+						roblox.setRank(groupId, id, 2)
 						.then(function(roles){
 							message.channel.send(`Fired user ${username}, rank changed from ${roles.oldRole.Name} to ${roles.newRole.Name}`)
 							const embed = new Discord.RichEmbed()
