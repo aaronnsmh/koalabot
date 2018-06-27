@@ -9,12 +9,13 @@ let id = await roblox.getIdFromUsername(name)
 	let rig = await roblox.getRankNameInGroup(937709, id2)
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-       .setTitle("Vote For" + args[0])
+       .setTitle(args[0])
 	  	 .setDescription("**Profile Link:** \n" + "https://www.roblox.com/users/" + id + "\n**Rank In Group:**\n" + rig)
 		   .setFooter("React with ✅ or ⛔")
 	  	   .setThumbnail(avatarurl)
      const pollTopic = await message.channel.sendEmbed(embed);
+    pollTopic.react(`⛔`);
     pollTopic.react(`✅`);
-    pollTopic.react(`⛔`);	        
+	        
 
 }
