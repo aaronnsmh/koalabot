@@ -2,8 +2,8 @@ var roblox = require('noblox.js')
 const superagent = require("superagent");
 exports.run = async (Discord, client, message, args) => {
 name = args[0]
-roblox.getIdFromUsername(name)
-  .then(function(id){
+let id = await roblox.getIdFromUsername(name)
+
 	  let id2 = id
 	let avatarurl = "https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userid=" + id2;
 	let rig = await roblox.getRankNameInGroup(937709, id2)
@@ -16,5 +16,5 @@ roblox.getIdFromUsername(name)
      const pollTopic = await message.channel.sendEmbed(embed);
     pollTopic.react(`✅`);
     pollTopic.react(`⛔`);	        
-});
+
 }
