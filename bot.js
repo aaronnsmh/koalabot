@@ -8,7 +8,7 @@ const db = require('quick.db');
 const { get } = require("snekfetch"); 
 const superagent = require("superagent");
 const weather = require('weather-js');
-
+var roblox = require('noblox.js');
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
  
 const http = require('http');
@@ -23,7 +23,7 @@ http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
     client.user.setStatus("online");
-    let GroupID = 123456;
+    let GroupID = 937709;
     let onWallPost = roblox.onWallPost(GroupID);
     onWallPost.on('data', function(post) {
         console.log(post.author.username + " posted: " + post.message);
