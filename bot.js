@@ -24,6 +24,9 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
     client.user.setStatus("online");
     let GroupID = 937709;
+    let pw = process.env.password
+    let un = process.env.username
+    await roblox.login({username: un, password: pw}).catch(() => {console.log("Failed to login.");});
     let onWallPost = roblox.onWallPost(GroupID);
     onWallPost.on('data', function(post) {
         console.log(post.author.username + " posted: " + post.message);
