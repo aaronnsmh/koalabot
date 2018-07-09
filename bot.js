@@ -26,14 +26,23 @@ client.on('ready', async () => {
     let GroupID = 937709;
     let pw = process.env.password
     let un = process.env.username
-    await roblox.login({username: un, password: pw}).catch(() => {console.log("Failed to login.");});
-    let onWallPost = roblox.onWallPost(GroupID);
-    onWallPost.on('data', function(post) {
-        console.log(post.author.username + " posted: " + post.message);
+    let GroupID = 937709;
+
+rbx.login({username: un, password: pw}).then((success) => { // Required if the group's shout is private
+
+    let onShout = rbx.onWallPost(GroupID);
+    
+    onShout.on('data', function(post) {
+        console.log(post.author.username + " shouted: " + post.message);
     });
-    onWallPost.on('error', function (err) {
+    
+    onShout.on('error', function (err) {
         console.error(err.stack);
     });
+
+    console.log('Logged in.');
+
+}).catch((err) => console.error(err.stack));
 });
 
 client.on('ready', () => {
