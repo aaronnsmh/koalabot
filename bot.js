@@ -20,7 +20,7 @@ setInterval(() => {
 http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 300000);
 
-client.on('ready', () => {
+client.on('ready', async () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
     client.user.setStatus("online");
     let GroupID = 937709;
