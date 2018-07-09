@@ -23,7 +23,14 @@ http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
     client.user.setStatus("online");
- 
+    let GroupID = 123456;
+    let onWallPost = roblox.onWallPost(GroupID);
+    onWallPost.on('data', function(post) {
+        console.log(post.author.username + " posted: " + post.message);
+    });
+    onWallPost.on('error', function (err) {
+        console.error(err.stack);
+    });
 });
 
 client.on('ready', () => {
