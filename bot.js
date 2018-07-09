@@ -26,7 +26,6 @@ client.on('ready', async () => {
     let GroupID = 937709;
     let pw = process.env.password
     let un = process.env.username
-    let GroupID = 937709;
 
 rbx.login({username: un, password: pw}).then((success) => { // Required if the group's shout is private
 
