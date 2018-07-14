@@ -10,9 +10,8 @@ const request= require('request');
                     message.reply("You've succesfully been verified!");
 					rbx.getRankNameInGroup(937709,body.robloxId).then(data => {
 						rbx.getRankInGroup(937709,body.robloxId).then(data1 => {
-							MessageUser.addRole(Verifyaa)
 							let RankForGroup = message.guild.roles.find("name",data);
-							await MessageUser.addRole(RankForGroup)
+							message.member.addRole(RankForGroup)
 							message.reply('Your roles have been updated, have a great day!')
 					})
 					})
