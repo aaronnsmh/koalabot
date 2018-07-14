@@ -13,7 +13,7 @@ const request= require('request');
 							MessageUser.addRole(Verifyaa)
 							let RankForGroup = message.guild.roles.find("name",data);
 							await MessageUser.addRole(RankForGroup)
-							message.reply('Your roles have been updated, have a great day!)
+							message.reply('Your roles have been updated, have a great day!')
 					})
 					})
                 }
