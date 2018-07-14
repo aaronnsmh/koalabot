@@ -7,4 +7,4 @@ const request= require('request');
               } else { 
                     message.member.setNickname(body.robloxUsername);
                     message.member.addRole(message.guild.roles.find("name", "Verified"));
-	      }}
+	      }}}
