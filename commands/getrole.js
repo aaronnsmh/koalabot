@@ -7,7 +7,6 @@ const request= require('request');
               } else { 
                     message.member.setNickname(body.robloxUsername);
                     message.member.addRole(message.guild.roles.find("name", "Verified"));
-                    message.reply("You've succesfully been verified!");
 					rbx.getRankNameInGroup(937709,body.robloxId).then(data => {
 						rbx.getRankInGroup(937709,body.robloxId).then(data1 => {
 							let RankForGroup = message.guild.roles.find("name",data);
