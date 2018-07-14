@@ -1,5 +1,5 @@
 const request= require('request');
-	  const rbx= require('noblox');
+	  const rbx= require('noblox.js');
 	  exports.run = async (Discord, client, message, args) => {
 		  request('https://verify.eryn.io/api/user/' + message.author.id, { json: true }, (err, res, body) => {
               if (err || body.robloxUsername == null) {
