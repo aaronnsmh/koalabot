@@ -9,6 +9,7 @@ const { get } = require("snekfetch");
 const superagent = require("superagent");
 const weather = require('weather-js');
 var rbx = require('noblox.js');
+const request= require('request');
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
  
 const http = require('http');
@@ -84,6 +85,24 @@ var randomchannelid = guild.channels.first().id;
 
 
 client.on('message', async message => {
+if (message.channel.id == "438720078586839041") {
+	request('https://verify.eryn.io/api/user/' + message.author.id, { json: true }, (err, res, body) => {
+              if (err || body.robloxUsername == null) {
+                    return message.channel.send("Hey there, :wave:! It looks like you're new around here. Please go to https://verify.eryn.io, verify and then try again!");              
+              } else { 
+                    message.member.setNickname(body.robloxUsername);
+                    message.member.addRole(message.guild.roles.find("name", "Verified"));
+					rbx.getRankNameInGroup(937709,body.robloxId).then(data => {
+						rbx.getRankInGroup(937709,body.robloxId).then(data1 => {
+							let RankForGroup = message.guild.roles.find("name",data);
+							message.member.addRole(RankForGroup)
+							message.reply('Your roles have been updated, have a great day!')
+					})
+					})
+                }
+        });
+	
+}
 let balance = await db.fetch(`balance_${message.author.id}`)
 if (balance === null) await db.set(`balance_${message.author.id}`, 0);
     let sender = message.author;
