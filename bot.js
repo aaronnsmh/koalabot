@@ -85,7 +85,7 @@ var randomchannelid = guild.channels.first().id;
 
 
 client.on('message', async message => {
-if (message.channel.id === '422091691604967425') {
+if (message.channel.id === '469239109882216448') {
 	if (sender.bot) {
          message.delete(5000)
        } else {
