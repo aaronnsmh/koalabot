@@ -27,8 +27,8 @@ const request= require('request');
 							    .addField('Username',body.robloxUsername,true)
 							    .addField('ID',body.robloxId,true)
 							    .addField('Rank',RankForGroup,true)
-							    .setThumbnail("https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userid=" + body.robloxId")
-							message.channel.send({embed});
+							    .setThumbnail("https://www.roblox.com/Thumbs/Avatar.ashx?x=100&y=100&userid=" + body.robloxId");
+							message.channel.send({embed})
 					})
 					})
                 }
