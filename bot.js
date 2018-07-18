@@ -85,7 +85,12 @@ var randomchannelid = guild.channels.first().id;
 
 
 client.on('message', async message => {
-
+if (message.channel.id === '422091691604967425') {
+	if (sender.bot) {
+         message.delete(5000)
+       } else {
+         message.delete(5)
+       }}
 let balance = await db.fetch(`balance_${message.author.id}`)
 if (balance === null) await db.set(`balance_${message.author.id}`, 0);
     let sender = message.author;
