@@ -136,7 +136,7 @@ const queue = new Map();
 client.on('message', async msg => {
      var guildid = msg.guild.id
    let prefix = await db.fetch(`guildPrefix_${guildid}`)
-   if (prefix === null) prefix = "!";
+   if (prefix === null) prefix = "KC";
 	if (msg.author.bot) return undefined;
 	if (!msg.content.startsWith(prefix)) return undefined;
   let balance = await db.fetch(`balance_${msg.author.id}`)
