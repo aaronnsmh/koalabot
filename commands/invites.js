@@ -3,7 +3,7 @@ const Discord = require('discord.js'), // This will be used for creating embed
       table = require('table'); // This will be used for preparing the output to a table
 
 // We can call our command handler here
-module.exports.run = async (client, message, args, tools) => {
+module.exports.run = async (Discord, client, message, args, tools) => {
     // Be sure to call this in async, as we will be fetching the invites of the guild
 
     // First, we need to fetch the invites
