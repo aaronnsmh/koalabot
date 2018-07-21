@@ -3,7 +3,7 @@ var roblox = require('noblox.js');
 exports.run = (Discord, client, message, args) => {;
 if (!message.member.hasPermission("KICK_MEMBERS")) return message.channel.send("Only MR/HR can rank people!")
 var groupId = 937709;
-var maximumRank = 255;
+var maximumRank = 8;
 let staffc = message.guild.channels.find("name", "promotion-logs") 
 
 roblox.login({username: process.env.username, password: process.env.password}).then((success) => {
