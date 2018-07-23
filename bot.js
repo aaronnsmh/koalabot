@@ -80,7 +80,7 @@ var randomchannelid = guild.channels.first().id;
 client.on('guildMemberAdd', async member => {
   let users = client.users.size
         client.user.setPresence({ game: { name: `Koala Cafe | ${users} users!`, url: 'https://twitch.tv/discordapp', type: 1 } });
-	}
+	
 
              
 
