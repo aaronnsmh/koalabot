@@ -1,6 +1,7 @@
 exports.run = (Discord, client, message, args) => {
 
-       if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send("You need the ADMINISTRATOR permission to run this comamnd!")
+      let allowedRole = message.guild.roles.find("name", "Announce Permissions");
+if(!message.member.roles.has(allowedRole.id)) return message.channel.send("You have invalid permissions!")
 		   const color = args[0]
 		   let title = args[0];
 		   const text = args.slice(0).join(" ");
