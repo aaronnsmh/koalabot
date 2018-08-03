@@ -19,7 +19,7 @@ exports.run = (Discord, client, message, args) => {
             .setColor(0x8cff00)
             .setTimestamp()
             .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}\n**In Channel:** ${channel}`);
-        staffc.sendMessage({embed});
+        staffc.send(embed);
         message.channel.send(`**${user.tag}** has been warned successfully for ${reason}`);
         user.send(`You've been warned in Koala Cafe for **${reason}** by ${message.author.tag}! Tut tut...`);
 }
