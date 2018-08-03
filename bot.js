@@ -21,6 +21,9 @@ setInterval(() => {
 http.get(`http://${process.env.PROJECT_DOMAIN}.glitch.me/`);
 }, 300000);
 
+var cleverbot = require("cleverbot.io"),
+	bot1 = new cleverbot('cSUfR31XqVEYmxrr','omREXBOUDoPwBFxelqdXzhP5slKW1Tlb');
+
 client.on('ready', async () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
     client.user.setStatus("online");
@@ -80,6 +83,18 @@ var randomchannelid = guild.channels.first().id;
              
 
 client.on('message', async message => {
+	    if (message.channel.type === "dm") {
+      let input = message.content;
+      message.channel.startTyping();
+       bot1.setNick(message.author.tag);
+       bot1.create(function (err, session) {
+       bot1.ask(input, function (err, res) {
+         if(err) console.log(err);
+         message.channel.send(res)
+         message.channel.stopTyping();
+       });
+     });
+      }
 	if (message.content == "Alexa, play despacito.") {
     if (message.member.voiceChannel) {
         message.channel.send('Now you will feel the experience of Despacito...')
