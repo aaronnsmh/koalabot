@@ -2,7 +2,6 @@
 exports.run = (Discord, client, message, args) => {
     let reason = args.slice(1).join(" ");
     let user = message.mentions.users.first();
-    let staffc = message.guild.channels.find("name", "logs")
     let kUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if (!kUser) return message.channel.send("Can't find user!");
     let kReason = args.join(" ").slice(22);
@@ -13,7 +12,7 @@ exports.run = (Discord, client, message, args) => {
             .setColor(0x8cff00)
             .setTimestamp()
             .setDescription(`**Action:** Ban\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
-        staffc.send({embed});
+        
     message.channel.send(`**${user.tag}** has been banned successfully for ${reason}`);
     user.send(`You've been banned in Koala Cafe for **${reason}** by ${message.author.tag}! Tut tut...`);
     message.guild.member(kUser).ban(kReason);
